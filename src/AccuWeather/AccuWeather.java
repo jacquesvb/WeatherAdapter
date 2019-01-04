@@ -55,7 +55,7 @@ public class AccuWeather {
 
     @Override
     public String toString() {
-        return "AccuWeather{" +
+        return "AccuWeatherAdapter{" +
                 "LocalObservationDateTime='" + LocalObservationDateTime + '\'' +
                 ", EpochTime=" + EpochTime +
                 ", WeatherText='" + WeatherText + '\'' +

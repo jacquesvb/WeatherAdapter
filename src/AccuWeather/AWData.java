@@ -32,7 +32,7 @@ public class AWData {
 //            byte[] data = new byte[1024];
 //            inputStream.read(data);
 //            ObjectMapper objectMapper = new ObjectMapper();
-//            AccuWeather accuWeather = objectMapper.readValue(inputStream, AccuWeather.class);
+//            AccuWeatherAdapter accuWeather = objectMapper.readValue(inputStream, AccuWeatherAdapter.class);
 //            System.out.println("Object Mapper: " + accuWeather);
 //            int n;
 //            while((n = is.read(jsonData)) > 0) {
@@ -49,7 +49,7 @@ public class AWData {
 //            TypeReference<HashMap<String,Object>> typeRef = new TypeReference<HashMap<String, Object>>() {};
 //            HashMap<String,Object> o = mapper.readValue(String.valueOf(weatherData), typeRef);
 //            System.out.println("Hash Mappy: " + o);
-//            aw = mapper.readValue(awData, new TypeReference<List<AccuWeather>>(){});
+//            aw = mapper.readValue(awData, new TypeReference<List<AccuWeatherAdapter>>(){});
             AccuWeather aw = mapper.readValue(String.valueOf(weatherData), new TypeReference<AccuWeather>(){});
             System.out.println("This is what is what: " + aw);
             return aw;

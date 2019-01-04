@@ -7,8 +7,8 @@ public class WeatherDemo {
         WeatherFactory weatherFactory = new WeatherFactory();
 
         Weather accuW;
-        accuW = weatherFactory.getData("aw");
-        System.out.println("AccuWeather:");
+        accuW = weatherFactory.pickSource("aw");
+        System.out.println("AccuWeatherAdapter:");
         System.out.println("Description: " + accuW.getDescription());
         System.out.println("Current: " + accuW.getCurrent());
         System.out.println("High: " + accuW.getHigh());

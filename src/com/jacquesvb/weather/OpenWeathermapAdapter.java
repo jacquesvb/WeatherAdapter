@@ -6,17 +6,7 @@ import com.google.gson.JsonArray;
 import java.io.IOException;
 import java.util.Map;
 
-public class OpenWeathermap extends WeatherHelper implements DataSource {
-
-    @Override
-    public Weather getAccuWeather() {
-        return null;
-    }
-
-    @Override
-    public Weather getDarkSky() {
-        return null;
-    }
+public class OpenWeathermapAdapter extends WeatherHelper implements IOpenWeathermap {
 
     @Override
     public Weather getOpenWeathermap() throws IOException {

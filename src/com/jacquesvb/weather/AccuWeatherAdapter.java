@@ -6,7 +6,7 @@ import com.google.gson.JsonArray;
 import java.io.IOException;
 import java.util.Map;
 
-public class AccuWeather extends WeatherHelper implements DataSource {
+public class AccuWeatherAdapter extends WeatherHelper implements IAccuWeather {
 
     @Override
     public Weather getAccuWeather() throws IOException {
@@ -34,18 +34,8 @@ public class AccuWeather extends WeatherHelper implements DataSource {
         System.out.println("High: " + Float.parseFloat(maxTemp.get("Value").toString()));
         high = Float.parseFloat(maxTemp.get("Value").toString());
         current = 42.2f;
-        description = "AccuWeather API Stinks!";
+        description = "AccuWeatherAdapter API Stinks!";
 
         return buildWeatherObj(description, current, low, high);
-    }
-
-    @Override
-    public Weather getDarkSky() {
-        return null;
-    }
-
-    @Override
-    public Weather getOpenWeathermap() {
-        return null;
     }
 }

@@ -8,12 +8,7 @@ import com.google.gson.JsonObject;
 import java.io.IOException;
 import java.util.Map;
 
-public class DarkSky extends WeatherHelper implements DataSource {
-
-    @Override
-    public Weather getAccuWeather() {
-        return null;
-    }
+public class DarkSkyAdapter extends WeatherHelper implements IDarkSky {
 
     @Override
     public Weather getDarkSky() throws IOException {
@@ -42,10 +37,5 @@ public class DarkSky extends WeatherHelper implements DataSource {
         current = Float.parseFloat(currentData.get("temperature").toString());
 
         return buildWeatherObj(description, current, low, high);
-    }
-
-    @Override
-    public Weather getOpenWeathermap() {
-        return null;
     }
 }
